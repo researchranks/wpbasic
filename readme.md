@@ -21,7 +21,7 @@ wpseek.com
 ## Wordpress Functions For Removing Header (Used Later / Not For Now)
 
 ```wordpress
-
+// wp_deregister_script( 'jquery' ); 
 remove_action('wp_head' , 'adjacent_posts_rel_link_wp_head', 10, 0 );
 remove_action('wp_head' , 'adjacent_posts_rel_link', 10, 0); // remove the next and previous post links
 remove_action('wp_head' , 'feed_links_extra', 3); // removes all extra rss feed links
