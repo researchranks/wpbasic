@@ -21,7 +21,23 @@ wpseek.com
 ## Wordpress Functions For Removing Header (Used Later / Not For Now)
 
 ```wordpress
-// wp_deregister_script( 'jquery' ); 
+// remove stuff (e.g. style from head tag)
+// https://wordpress.org/support/topic/wp-44-remove-json-api-and-x-pingback-from-http-headers
+// https://codex.wordpress.org/Function_Reference/wp_deregister_style
+
+
+wp_deregister_script( 'jquery' ); 
+wp_deregister_style( 'open-sans' );
+
+remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 ); // remove wp-json (see link on next line)
+//(link: https://wordpress.org/support/topic/wp-44-remove-json-api-and-x-pingback-from-http-headers)
+remove_action('wp_head' , 'wp_shortlink_wp_head', 10, 0 ); // remove shortlink
+
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+remove_action( 'admin_print_styles', 'print_emoji_styles' ); 
+
+
+remove_action('wp_head' , 'start_post_rel_link', 10, 0); // remove random post link
 remove_action('wp_head' , 'adjacent_posts_rel_link_wp_head', 10, 0 );
 remove_action('wp_head' , 'adjacent_posts_rel_link', 10, 0); // remove the next and previous post links
 remove_action('wp_head' , 'feed_links_extra', 3); // removes all extra rss feed links
