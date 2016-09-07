@@ -1,15 +1,27 @@
 ### Site Architecture
-- location
- - about
- - hours
- - contact
- 
+
  - menu
-  - sandwiches
-     - tritip melt
-         - price
-		 - description
-		 - image
+
+ - location
+    - map
+    - address
+    - phone number
+
+ - about
+
+ - hours
+
+ - contact
+    - email
+    - address
+    - phone number
+
+ - sandwiches
+    - name (example: tritip melt)
+    - price
+    - description
+    - image
+
   - sides
   - deserts
   - drinks

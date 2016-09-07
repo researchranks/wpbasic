@@ -16,9 +16,6 @@ require get_template_directory() . '/inc/customizer/wpbasic-default-values.php';
 
 // side menu for custom post type
 require get_template_directory() . '/inc/custom-post/wpbasic-custom-post-type.php';
-/*
-require get_template_directory() . '/inc/custom-post-restaurant/wpbasic-custom-post-type.php';
-*/
 
 // require somehow not needed for wp-basic-customizer.php to work, interestinly
 // for visual purpose, it was included in this code
@@ -35,7 +32,7 @@ require get_template_directory() . '/inc/custom-post/metaboxes/wpbasic-customers
 
 require get_template_directory() . '/inc/custom-post/metaboxes/wpbasic-customers-save-data.php';
 
-require get_template_directory() . '/inc/custom-post/metaboxes/wpbasic-custom-hook-example.php';
+require get_template_directory() . '/inc/dustybuns/dustybuns-custom-post-type.php';
 
 
 

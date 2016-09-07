@@ -35,6 +35,20 @@ function my_custom_post_customer() {
     'show_ui'             => true,
     'show_in_menu'        => true,
     'menu_position'       => 5,
+    /**
+    * 0   = at the very top
+    * 5   = below Posts
+    * 10  = below Media
+    * 15  = belwo Links
+    * 20  = below Pages
+    * 25  = below comments
+    * 60  = below first separator
+    * 65  = below Plugins
+    * 70  = below Users
+    * 75  = below Tools
+    * 80  = below Settings
+    * 100 = below second separator
+    */
     'register_meta_box_cb' => 'add_customers_metaboxes',
     // add css class for fontawesome replacemet
     'menu_icon'           => 'dashicons-wpbasic-customer',

@@ -10,7 +10,6 @@ add_action( 'init', 'my_custom_post_customer' );
 add_action( 'init', 'remove_header_info' );
 
 
-add_action( 'init', 'restaurant_create_taxonomies' );
 
 add_action( 'after_setup_theme', 'custom_theme_setup' ); // custom_theme_setup parameter is the function name created
 //add_action( 'init', 'wpbasic_custom_post_type' );
