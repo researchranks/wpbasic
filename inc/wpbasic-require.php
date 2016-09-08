@@ -32,7 +32,11 @@ require get_template_directory() . '/inc/custom-post/metaboxes/wpbasic-customers
 
 require get_template_directory() . '/inc/custom-post/metaboxes/wpbasic-customers-save-data.php';
 
-require get_template_directory() . '/inc/dustybuns/dustybuns-custom-post-type.php';
+require get_template_directory() . '/inc/restaurant/restaurant-custom-post-type.php';
+
+require get_template_directory() . '/inc/restaurant/restaurant-menu-taxonomies.php';
+
+
 
 
 

@@ -1,7 +1,12 @@
 <?php  wp_head(); ?>
 
+<strong>Sandwich Type: </strong>
 
-<h1> Custom Field values for car are:
+<?php  
+    the_terms( $post->ID, 'sandwich' ,  ' ' );
+?>
+
+<!--<h1> Custom Field values for car are:-->
 
     <?php 
     
@@ -15,12 +20,16 @@ foreach ( $custom_fields as $field_key => $field_values ) {
 
 $custom_fields = get_post_custom();
 
-foreach ( $custom_fields as $field_key => $field_values ) {
-	if(!isset($field_values[0])) continue;
-	if(in_array($field_key,array("_edit_lock","_edit_last"))) continue;
-echo '<br>' . $field_key . ':';
-//. '=>' . $field_values[0];
-}
+// foreach ( $custom_fields as $field_key => $field_values ) {
+// 	if(!isset($field_values[0])) continue;
+// 	if(in_array($field_key,array("_edit_lock","_edit_last"))) continue;
+// echo '<br>' . $field_key . ':';
+
+
+// //. '=>' . $field_values[0];
+// }
+
+
 /*
 $custom_field_keys = get_post_custom_keys();
 foreach ( $custom_field_keys as $key => $value ) {
@@ -41,15 +50,17 @@ foreach ( $custom_field_keys as $key => $value ) {
             // By changing it to false, we tell the function to RETURN AN ARRAY OF THE VALUES for the specified key. 
             // This is a very handy trick for displaying multiple key values.
         
-        foreach($cars as $car) { 
-            // when $car is read in the loop it should go through all the values in $cars
+        // foreach($cars as $car) { 
+        //     // when $car is read in the loop it should go through all the values in $cars
             
-            echo '<br>' . ( '<li>' . $car . '</li>' ) . '<br>';
+        //     echo '<br>' . ( '<li>' . $car . '</li>' ) . '<br>';
             
-        }
+        // }
+        
+        
     ?>
     
-</h1>
+<!--</h1>-->
 
 <h1>Twitter Name Is:
     <?php 

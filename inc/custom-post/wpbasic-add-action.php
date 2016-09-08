@@ -28,6 +28,9 @@ add_action('save_post', 'save_customer_image_meta', 1, 2);
 
 add_action( 'save_post', 'status_save_postdata' );
 
+add_action( 'init', 'restaurant_menu_custom_post' ); // Custom post type for restaurant:  Menu Items
+
+add_action( 'init', 'restaurant_menu_taxonomies' ); // Taxonomies of custom post type for restaurant:  Menu Items
 
 
 ?>
